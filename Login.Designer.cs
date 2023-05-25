@@ -63,6 +63,7 @@
             txtUserNo.Name = "txtUserNo";
             txtUserNo.Size = new Size(284, 33);
             txtUserNo.TabIndex = 0;
+            txtUserNo.TextChanged += txtUserNo_TextChanged;
             txtUserNo.KeyPress += txtUserNo_KeyPress;
             // 
             // txtPassword

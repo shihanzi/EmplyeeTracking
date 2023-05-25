@@ -16,5 +16,10 @@ namespace EmplyeeTracking
         {
             Application.Exit();
         }
+
+        private void txtUserNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
