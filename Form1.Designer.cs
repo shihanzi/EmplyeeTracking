@@ -1,6 +1,6 @@
 ﻿namespace EmplyeeTracking
 {
-    partial class Form1
+    partial class FrmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -53,7 +53,7 @@
             label2.Location = new Point(12, 112);
             label2.Name = "label2";
             label2.Size = new Size(91, 25);
-            label2.TabIndex = 1;
+            label2.TabIndex = 0;
             label2.Text = "Password";
             // 
             // txtUserNo
@@ -62,7 +62,7 @@
             txtUserNo.Location = new Point(129, 60);
             txtUserNo.Name = "txtUserNo";
             txtUserNo.Size = new Size(284, 33);
-            txtUserNo.TabIndex = 2;
+            txtUserNo.TabIndex = 0;
             txtUserNo.KeyPress += txtUserNo_KeyPress;
             // 
             // txtPassword
@@ -71,7 +71,7 @@
             txtPassword.Location = new Point(129, 104);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(284, 33);
-            txtPassword.TabIndex = 3;
+            txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -79,7 +79,7 @@
             btnLogin.Location = new Point(129, 179);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(118, 39);
-            btnLogin.TabIndex = 4;
+            btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
             // 
@@ -89,11 +89,12 @@
             btnExit.Location = new Point(262, 179);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(118, 39);
-            btnExit.TabIndex = 5;
+            btnExit.TabIndex = 3;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
-            // Form1
+            // FrmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -104,8 +105,8 @@
             Controls.Add(txtUserNo);
             Controls.Add(label2);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "FrmLogin";
+            Text = "Login";
             ResumeLayout(false);
             PerformLayout();
         }
