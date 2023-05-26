@@ -1,3 +1,5 @@
+using System.Net.Http.Headers;
+
 namespace EmplyeeTracking
 {
     public partial class FrmLogin : Form
@@ -20,6 +22,14 @@ namespace EmplyeeTracking
         private void txtUserNo_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            FrmDashboard frmDash = new FrmDashboard();
+            this.Hide();
+            frmDash.ShowDialog();
+            this.Visible = true;
         }
     }
 }

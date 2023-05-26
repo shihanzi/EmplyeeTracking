@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EmployeeTracking;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,12 @@ namespace EmplyeeTracking
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            EmployeeList empList = new EmployeeList();
+            empList.Visible = true;
         }
     }
 }

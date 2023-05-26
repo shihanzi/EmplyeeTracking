@@ -33,7 +33,7 @@
             btnClose = new Button();
             btnDelete = new Button();
             btnEdit = new Button();
-            btnAdd = new Button();
+            btnAddNew = new Button();
             dataGridView1 = new DataGridView();
             pnlForUser = new Panel();
             cmbDepartment = new ComboBox();
@@ -47,6 +47,7 @@
             txtName = new TextBox();
             txtSurname = new TextBox();
             pnlForAdmin = new Panel();
+            btnClear = new Button();
             cmbTaskState = new ComboBox();
             btnSearch = new Button();
             groupBox1 = new GroupBox();
@@ -58,7 +59,6 @@
             label8 = new Label();
             label7 = new Label();
             label6 = new Label();
-            btnClear = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             pnlForUser.SuspendLayout();
@@ -72,7 +72,7 @@
             panel1.Controls.Add(btnClose);
             panel1.Controls.Add(btnDelete);
             panel1.Controls.Add(btnEdit);
-            panel1.Controls.Add(btnAdd);
+            panel1.Controls.Add(btnAddNew);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 472);
             panel1.Name = "panel1";
@@ -120,15 +120,15 @@
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnAddNew
             // 
-            btnAdd.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAdd.Location = new Point(225, 18);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(141, 64);
-            btnAdd.TabIndex = 1;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAddNew.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddNew.Location = new Point(225, 18);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(141, 64);
+            btnAddNew.TabIndex = 1;
+            btnAddNew.Text = "Add New";
+            btnAddNew.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -162,7 +162,7 @@
             // 
             cmbDepartment.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbDepartment.FormattingEnabled = true;
-            cmbDepartment.Location = new Point(112, 99);
+            cmbDepartment.Location = new Point(166, 121);
             cmbDepartment.Name = "cmbDepartment";
             cmbDepartment.Size = new Size(196, 28);
             cmbDepartment.TabIndex = 12;
@@ -171,7 +171,7 @@
             // 
             cmbPosition.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             cmbPosition.FormattingEnabled = true;
-            cmbPosition.Location = new Point(111, 135);
+            cmbPosition.Location = new Point(165, 157);
             cmbPosition.Name = "cmbPosition";
             cmbPosition.Size = new Size(197, 28);
             cmbPosition.TabIndex = 14;
@@ -180,7 +180,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(12, 136);
+            label5.Location = new Point(66, 158);
             label5.Name = "label5";
             label5.Size = new Size(61, 20);
             label5.TabIndex = 15;
@@ -190,7 +190,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(10, 102);
+            label4.Location = new Point(64, 124);
             label4.Name = "label4";
             label4.Size = new Size(89, 20);
             label4.TabIndex = 13;
@@ -200,7 +200,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 8);
+            label1.Location = new Point(66, 30);
             label1.Name = "label1";
             label1.Size = new Size(62, 20);
             label1.TabIndex = 6;
@@ -209,7 +209,7 @@
             // txtUserNo
             // 
             txtUserNo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUserNo.Location = new Point(111, 4);
+            txtUserNo.Location = new Point(165, 26);
             txtUserNo.Name = "txtUserNo";
             txtUserNo.Size = new Size(197, 27);
             txtUserNo.TabIndex = 7;
@@ -220,7 +220,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(12, 37);
+            label2.Location = new Point(66, 59);
             label2.Name = "label2";
             label2.Size = new Size(49, 20);
             label2.TabIndex = 9;
@@ -230,7 +230,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(10, 69);
+            label3.Location = new Point(64, 91);
             label3.Name = "label3";
             label3.Size = new Size(74, 20);
             label3.TabIndex = 8;
@@ -239,7 +239,7 @@
             // txtName
             // 
             txtName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(111, 35);
+            txtName.Location = new Point(165, 57);
             txtName.Name = "txtName";
             txtName.Size = new Size(197, 27);
             txtName.TabIndex = 10;
@@ -247,7 +247,7 @@
             // txtSurname
             // 
             txtSurname.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSurname.Location = new Point(111, 67);
+            txtSurname.Location = new Point(165, 89);
             txtSurname.Name = "txtSurname";
             txtSurname.Size = new Size(197, 27);
             txtSurname.TabIndex = 11;
@@ -269,6 +269,16 @@
             pnlForAdmin.Name = "pnlForAdmin";
             pnlForAdmin.Size = new Size(460, 203);
             pnlForAdmin.TabIndex = 2;
+            // 
+            // btnClear
+            // 
+            btnClear.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnClear.Location = new Point(319, 162);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(121, 30);
+            btnClear.TabIndex = 13;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
             // 
             // cmbTaskState
             // 
@@ -379,16 +389,6 @@
             label6.TabIndex = 0;
             label6.Text = "Task Date";
             // 
-            // btnClear
-            // 
-            btnClear.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnClear.Location = new Point(319, 162);
-            btnClear.Name = "btnClear";
-            btnClear.Size = new Size(121, 30);
-            btnClear.TabIndex = 13;
-            btnClear.Text = "Clear";
-            btnClear.UseVisualStyleBackColor = true;
-            // 
             // FrmTask_List
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -399,6 +399,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Name = "FrmTask_List";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Task_List";
             Load += FrmTask_List_Load;
             panel1.ResumeLayout(false);
@@ -420,7 +421,7 @@
         private Button btnClose;
         private Button btnDelete;
         private Button btnEdit;
-        private Button btnAdd;
+        private Button btnAddNew;
         private Panel pnlForUser;
         private Panel pnlForAdmin;
         private Label label1;

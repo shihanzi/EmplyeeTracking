@@ -258,6 +258,7 @@
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Name = "EmployeeList";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Emplyee List";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);

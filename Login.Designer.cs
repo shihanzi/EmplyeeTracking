@@ -83,6 +83,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnExit
             // 
@@ -107,6 +108,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "FrmLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             ResumeLayout(false);
             PerformLayout();

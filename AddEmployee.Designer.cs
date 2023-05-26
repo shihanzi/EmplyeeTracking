@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            txtUserNo = new TextBox();
+            chkIsAdmin = new CheckBox();
             txtPassword = new TextBox();
             label2 = new Label();
-            chkIsAdmin = new CheckBox();
+            label1 = new Label();
+            txtUserNo = new TextBox();
             Name = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -71,23 +71,16 @@
             panel1.Size = new Size(893, 71);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // chkIsAdmin
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(16, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(80, 25);
-            label1.TabIndex = 2;
-            label1.Text = "User No";
-            // 
-            // txtUserNo
-            // 
-            txtUserNo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txtUserNo.Location = new Point(102, 12);
-            txtUserNo.Name = "txtUserNo";
-            txtUserNo.Size = new Size(197, 33);
-            txtUserNo.TabIndex = 3;
+            chkIsAdmin.AutoSize = true;
+            chkIsAdmin.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            chkIsAdmin.Location = new Point(630, 16);
+            chkIsAdmin.Name = "chkIsAdmin";
+            chkIsAdmin.Size = new Size(113, 29);
+            chkIsAdmin.TabIndex = 6;
+            chkIsAdmin.Text = "Is Admin?";
+            chkIsAdmin.UseVisualStyleBackColor = true;
             // 
             // txtPassword
             // 
@@ -107,16 +100,23 @@
             label2.TabIndex = 4;
             label2.Text = "Password";
             // 
-            // chkIsAdmin
+            // label1
             // 
-            chkIsAdmin.AutoSize = true;
-            chkIsAdmin.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            chkIsAdmin.Location = new Point(630, 16);
-            chkIsAdmin.Name = "chkIsAdmin";
-            chkIsAdmin.Size = new Size(113, 29);
-            chkIsAdmin.TabIndex = 6;
-            chkIsAdmin.Text = "Is Admin?";
-            chkIsAdmin.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(16, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(80, 25);
+            label1.TabIndex = 2;
+            label1.Text = "User No";
+            // 
+            // txtUserNo
+            // 
+            txtUserNo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUserNo.Location = new Point(102, 12);
+            txtUserNo.Name = "txtUserNo";
+            txtUserNo.Size = new Size(197, 33);
+            txtUserNo.TabIndex = 3;
             // 
             // Name
             // 
@@ -330,8 +330,8 @@
             Controls.Add(label3);
             Controls.Add(Name);
             Controls.Add(panel1);
-            //Name = "AddEmployee";
-            //Text = "AddEmployee";
+            Name = "AddEmployee";
+            StartPosition = FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

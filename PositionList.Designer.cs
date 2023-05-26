@@ -33,7 +33,7 @@
             btnClose = new Button();
             btnDelete = new Button();
             btnEdit = new Button();
-            btnAdd = new Button();
+            btnAddNew = new Button();
             ((System.ComponentModel.ISupportInitialize)DgvPositionList).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -53,7 +53,7 @@
             panel1.Controls.Add(btnClose);
             panel1.Controls.Add(btnDelete);
             panel1.Controls.Add(btnEdit);
-            panel1.Controls.Add(btnAdd);
+            panel1.Controls.Add(btnAddNew);
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 350);
             panel1.Name = "panel1";
@@ -91,15 +91,15 @@
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
             // 
-            // btnAdd
+            // btnAddNew
             // 
-            btnAdd.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAdd.Location = new Point(21, 18);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(176, 64);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAddNew.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddNew.Location = new Point(21, 18);
+            btnAddNew.Name = "btnAddNew";
+            btnAddNew.Size = new Size(176, 64);
+            btnAddNew.TabIndex = 0;
+            btnAddNew.Text = "Add New";
+            btnAddNew.UseVisualStyleBackColor = true;
             // 
             // PositionList
             // 
@@ -109,6 +109,7 @@
             Controls.Add(panel1);
             Controls.Add(DgvPositionList);
             Name = "PositionList";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "PositionList";
             ((System.ComponentModel.ISupportInitialize)DgvPositionList).EndInit();
             panel1.ResumeLayout(false);
@@ -122,6 +123,6 @@
         private Button btnClose;
         private Button btnDelete;
         private Button btnEdit;
-        private Button btnAdd;
+        private Button btnAddNew;
     }
 }
